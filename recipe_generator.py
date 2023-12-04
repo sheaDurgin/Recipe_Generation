@@ -21,13 +21,13 @@ def generate_recipe():
 root = tk.Tk()
 root.title("Recipe Generator")
 
-entry = tk.Entry(root, width=50)
+entry = tk.Entry(root, width=80)
 entry.pack()
 
 generate_button = tk.Button(root, text="Generate", command=generate_recipe)
 generate_button.pack()
 
-text_area = tk.Text(root, height=10, width=50)
+text_area = tk.Text(root, height=10, width=80)
 text_area.pack()
 
 root.mainloop()

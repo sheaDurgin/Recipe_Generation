@@ -125,5 +125,5 @@ class TextGenerator(callbacks.Callback):
             )
             start_tokens.append(sample_token)
             start_prompt = start_prompt + " " + self.index_to_word[sample_token]
-        print(f"\ngenerated text:\n{start_prompt}\n")
-        return info
+        # print(f"\ngenerated text:\n{start_prompt}\n")
+        return start_prompt
