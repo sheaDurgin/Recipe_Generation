@@ -4,9 +4,15 @@ from tensorflow.keras.models import load_model
 import numpy as np
 import json
 import tkinter as tk
+import re
+import string
+
+def unpad_punctuation(s):
+    punc = string.punctuation.replace('|', '')
+    return re.sub(r"\s*([{}])\s*".format(re.escape(punc)), r"\1 ", s)
 
 class TextGenerator(callbacks.Callback):
-    def __init__(self, index_to_word, model, top_k=10):
+    def __init__(self, index_to_word, model):
         self.index_to_word = index_to_word
         self.model = model
         self.word_to_index = {
@@ -37,7 +43,8 @@ class TextGenerator(callbacks.Callback):
             )
             start_tokens.append(sample_token)
             start_prompt = start_prompt + " " + self.index_to_word[sample_token]
-        return start_prompt
+
+        return unpad_punctuation(start_prompt)
 
 model = load_model("recipe_generator", compile=False)
 
@@ -49,7 +56,7 @@ text_generator = TextGenerator(vocab, model)
 def generate_recipe():
     prompt = entry.get()
     prompt = f"Recipe for {prompt} |"
-    info = text_generator.generate(prompt, max_tokens=256, temperature=0.5)
+    info = text_generator.generate(prompt, max_tokens=256, temperature=0.7)
     text_area.delete("1.0", tk.END)
     text_area.insert(tk.END, info)
 
