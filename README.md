@@ -6,4 +6,4 @@ Clone the repository
 `cd` into Recipe_Generation/
 `unzip recipe_model.zip`
 `pip install` the requirements in `requirements.txt`
-`python recipe_generator.py`
+`python run.py`
