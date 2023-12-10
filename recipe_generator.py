@@ -45,7 +45,7 @@ class TextGenerator(callbacks.Callback):
 
         return unpad_punctuation(start_prompt)
 
-model = load_model("recipe_generator", compile=False)
+model = load_model("model", compile=False)
 
 with open("vocab.json", "r") as json_file:
     vocab = json.load(json_file)

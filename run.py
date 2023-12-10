@@ -4,7 +4,7 @@ from recipe_generator import text_generator
 def generate_recipe():
     prompt = entry.get()
     prompt = f"Recipe for {prompt} |"
-    info = text_generator.generate(prompt, max_tokens=256, temperature=0.7)
+    info = text_generator.generate(prompt, max_tokens=128, temperature=0.7)
     text_area.delete("1.0", tk.END)
     text_area.insert(tk.END, info)
 
