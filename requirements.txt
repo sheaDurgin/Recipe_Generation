@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:316dbaa3e013b26e85d86c175dd902b351e5b567b3f358f370eb8c7d10ae338e
-size 33
+tensorflow==2.15.0
+numpy==1.26.2
