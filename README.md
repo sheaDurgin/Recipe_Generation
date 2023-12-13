@@ -8,3 +8,6 @@ download the [model](https://drive.google.com/file/d/1iGBn7v_n_Q0JbOzv0-54avZaq-
 `unzip model.zip`  
 `pip install` the requirements in `requirements.txt`  
 `python run.py`  
+
+## How to use
+Simply put a dish like "Vanilla Cupcakes" in the text bar and press generate and wait for a result  
