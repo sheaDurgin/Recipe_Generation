@@ -10,4 +10,4 @@ download the [model](https://drive.google.com/file/d/1iGBn7v_n_Q0JbOzv0-54avZaq-
 `python run.py`  
 
 ## How to use
-Simply put a dish like "Vanilla Cupcakes" in the text bar and press generate and wait for a result  
+Simply put a dish like "Vanilla Cupcakes" in the text bar, press generate, and wait for a result  
