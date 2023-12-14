@@ -1,5 +1,5 @@
 # Recipe_Generation
-Using Transformers to generate Recipes
+Using Transformers to generate Recipes, created by Shea Durgin and Alex O'Neill
 
 ## Installation
 Clone the repository  
